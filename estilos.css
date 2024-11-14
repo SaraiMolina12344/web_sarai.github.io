@@ -1,0 +1,364 @@
+body {
+    background-color: #f5f7f9;
+}
+
+#servicios {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+  }
+ 
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+    
+  
+
+  .service-card {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-animated:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-animated:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+/*creando los estilos para el header*/
+.header {
+    height: 100vh; /* Ajusta el alto del header al 100% de la ventana */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+   
+  }
+  
+  /* Estilo para el logo */
+  .header .logo img {
+    max-width: 200px; /* Tamaño exacto del logo */
+    position: absolute;
+    top: 10px; /* Espaciado superior */
+    left: 10px; /* Espaciado izquierdo */
+    z-index: 10; /* Para que se muestre por encima del fondo */
+  }
+  
+  /* Animación para el texto del header */
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .header-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .header-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Animación fadeIn de la clase 'animated' */
+  .animated.fadeIn {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /*creando los estilos para la section porque elegirnos*/
+ /* Estilos generales de la sección */
+#por-que-elegirnos {
+    background-color: #f8f9fa;
+  }
+  
+  #por-que-elegirnos h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Azul personalizado */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .why-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .why-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .why-item-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .why-item:hover .why-item-icon img {
+    transform: scale(1.1);
+  }
+  
+  .why-item h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .why-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Animaciones */
+  .wow {
+    visibility: hidden;
+  }
+  
+  .wow.zoomIn {
+    animation-name: zoomIn;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .why-item-icon img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    #por-que-elegirnos h2 {
+      font-size: 2rem;
+    }
+  }
+  
+
+  /*creando el estilo para el contacto*/
+/* Estilos generales de la sección */
+.contact-section {
+    background-color: #f4f7fc;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contact-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .contact-section .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section .section-description {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Estilos del formulario */
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .contact-form .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border 0.3s;
+  }
+  
+  /* Efecto de animación en el foco de los campos */
+  .contact-form .form-control:focus {
+    border-color: #4CAF50;
+    outline: none;
+    animation: focusAnimation 0.5s ease-in-out;
+  }
+  
+  /* Efecto en el botón */
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  
+  /* Animación para el foco de los campos */
+  @keyframes focusAnimation {
+    0% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 40px 0;
+    }
+  
+    .contact-section .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .contact-form .form-control {
+      font-size: 1rem;
+    }
+  
+    .contact-form .submit-btn {
+      font-size: 1rem;
+    }
+  }
+  
+
+  /*estilos para el footer*/
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  .footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  .footer .social-icons a:hover {
+    color: #00aced; /* color de hover para los iconos */
+  }
+  .footer .contact-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .footer .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+/*estilos para el video*/
+/* Estilos personalizados */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Mantiene la relación de aspecto 16:9 */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Estilo adicional para la animación de fade-in */
+  .animate-fadein {
+    animation: fadeIn 2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
